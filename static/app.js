@@ -1,6 +1,11 @@
 
 document.getElementById('cep').addEventListener('blur', fetchData)
 
+const input = document.getElementsByTagName('input')
+input.addEventListener('input', () => {
+    localStorage(input.value)
+})
+
 async function fetchData() {
     const cep = document.getElementById('cep').value
     const logradouro = document.getElementById('logradouro')
@@ -8,6 +13,8 @@ async function fetchData() {
     const cidade = document.getElementById('cidade')
     const estado = document.getElementById('estado')
     const regiao = document.getElementById('regiao')
+
+    localStorage.setItem(cep)
 
     const url = `https://viacep.com.br/ws/${cep}/json/`;
     try {

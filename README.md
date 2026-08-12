@@ -9,4 +9,7 @@ CREATE TABLE endereco3 (
     numero INT NOT NULL
 );
 
+ALTER USER 'nome_do_usuario'@'localhost' IDENTIFIED BY 'nova_senha';
+FLUSH PRIVILEGES;
+
 -- SO ESSE FUNCIONA SLA PQ NAO MUDE NUNCA!!!!!!!!!!!!!!!!!!!!!!!!!!!!
