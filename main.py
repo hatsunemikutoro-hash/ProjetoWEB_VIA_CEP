@@ -19,6 +19,7 @@ def register():
 
     valores = (cep, logradouro, bairro, cidade, estado, regiao, str(numero))
     print(valores)
+
     insert_table(sql_insert, valores)
 
     return "thanks", 200

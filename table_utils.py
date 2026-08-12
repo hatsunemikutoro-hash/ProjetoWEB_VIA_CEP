@@ -1,6 +1,6 @@
 import mysql.connector
 
-sql_insert = "INSERT INTO enderecos (cep, logradouro, numero, complemento, bairro, cidade, uf) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+sql_insert = "INSERT INTO endereco3 (cep, logradouro, bairro, cidade, estado, regiao, numero) VALUES (%s, %s, %s, %s, %s, %s, %s)"
 
 def insert_table(command: str, val: str):
     cnx = mysql.connector.connect(
