@@ -25,6 +25,24 @@ document.getElementById('clear').addEventListener("click", () => {
 
 })
 
+document.getElementById('save').addEventListener("click", () => {
+    const cep = document.getElementById('cep').value
+    const logradouro = document.getElementById('logradouro')
+    const bairro = document.getElementById('bairro')
+    const cidade = document.getElementById('cidade')
+    const estado = document.getElementById('estado')
+    const regiao = document.getElementById('regiao')
+    const num = document.getElementById('numero')
+
+    localStorage.setItem("cep", cep)
+    localStorage.setItem("logradouro", logradouro.value)
+    localStorage.setItem("bairro", bairro.value)
+    localStorage.setItem("cidade", cidade.value)
+    localStorage.setItem("estado", estado.value)
+    localStorage.setItem("regiao", regiao.value)
+
+})
+
 addEventListener('DOMContentLoaded', () => {
 
     cep.value = localStorage.getItem('cep')
@@ -44,13 +62,6 @@ async function fetchData() {
     const estado = document.getElementById('estado')
     const regiao = document.getElementById('regiao')
     const num = document.getElementById('numero')
-
-    localStorage.setItem("cep", cep)
-    localStorage.setItem("logradouro", logradouro.value)
-    localStorage.setItem("bairro", bairro.value)
-    localStorage.setItem("cidade", cidade.value)
-    localStorage.setItem("estado", estado.value)
-    localStorage.setItem("regiao", regiao.value)
     
 
     const url = `https://viacep.com.br/ws/${cep}/json/`;
