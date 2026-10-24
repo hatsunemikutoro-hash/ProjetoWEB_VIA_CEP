@@ -131,6 +131,3 @@ http://127.0.0.1:5000
 - O código atual foi pensado como uma aplicação local e de estudo.
 - O formulário salva o estado do usuário em `localStorage` no navegador, além de enviar os dados ao backend.
 
-## Licença
-
-Este projeto não especifica uma licença no momento. Caso queira, é possível adicionar uma licença posteriormente conforme a necessidade do uso.
